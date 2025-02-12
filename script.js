@@ -65,6 +65,14 @@ document.addEventListener("DOMContentLoaded", () => {
         textNormal.style.color = color;
         textItalic.style.color = color;
         fontColorValue.textContent = color;
+
+        // Update slider and label colors
+        document.querySelectorAll('input[type="range"]').forEach(slider => {
+            slider.style.background = color;
+        });
+        document.querySelectorAll('label').forEach(label => {
+            label.style.color = color;
+        });
     });
 
     fontSelector.addEventListener("change", () => {
@@ -90,4 +98,12 @@ document.addEventListener("DOMContentLoaded", () => {
     textBold.style.fontFamily = "Futura";
     textNormal.style.fontFamily = "Futura";
     textItalic.style.fontFamily = "Futura";
+
+    // Set initial slider and label colors
+    document.querySelectorAll('input[type="range"]').forEach(slider => {
+        slider.style.background = "#FF00FF";
+    });
+    document.querySelectorAll('label').forEach(label => {
+        label.style.color = "#FF00FF";
+    });
 });
