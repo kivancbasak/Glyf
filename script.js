@@ -68,13 +68,16 @@ document.addEventListener("DOMContentLoaded", () => {
         textItalic.style.color = color;
         fontColorValue.textContent = color;
 
-        // Update slider and label colors
+        // Update slider, label, and input colors
         document.querySelectorAll('input[type="range"]').forEach(slider => {
             slider.style.background = color;
             slider.style.setProperty('--slider-thumb-color', color);
         });
         document.querySelectorAll('label').forEach(label => {
             label.style.color = color;
+        });
+        document.querySelectorAll('.text-input, .font-selector').forEach(input => {
+            input.style.borderColor = color;
         });
     });
 
@@ -115,12 +118,15 @@ document.addEventListener("DOMContentLoaded", () => {
     textNormal.textContent = initialText;
     textItalic.textContent = initialText;
 
-    // Set initial slider and label colors
+    // Set initial slider, label, and input colors
     document.querySelectorAll('input[type="range"]').forEach(slider => {
         slider.style.background = "#FF00FF";
         slider.style.setProperty('--slider-thumb-color', "#FF00FF");
     });
     document.querySelectorAll('label').forEach(label => {
         label.style.color = "#FF00FF";
+    });
+    document.querySelectorAll('.text-input, .font-selector').forEach(input => {
+        input.style.borderColor = "#FF00FF";
     });
 });
