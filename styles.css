@@ -47,7 +47,7 @@ input, select {
 }
 
 .text-input {
-    padding: 10px;
+    padding: 60px;
     border: 1px solid var(--slider-thumb-color, #FF00FF); /* Use the variable for border color */
     border-radius: 4px;
     margin-bottom: 10px;
