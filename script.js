@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const letterSpacingInput = document.getElementById("letterSpacing");
     const lineHeightInput = document.getElementById("lineHeight");
     const wordSpacingInput = document.getElementById("wordSpacing");
-    const fontWeightInput = document.getElementById("fontWeight");
     const fontColorInput = document.getElementById("fontColor");
     const fontSelector = document.getElementById("fontSelector");
 
@@ -15,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const letterSpacingValue = document.getElementById("letterSpacingValue");
     const lineHeightValue = document.getElementById("lineHeightValue");
     const wordSpacingValue = document.getElementById("wordSpacingValue");
-    const fontWeightValue = document.getElementById("fontWeightValue");
     const fontColorValue = document.getElementById("fontColorValue");
 
     // Google Fonts API Key (Replace with your key)
@@ -61,13 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
         textNormal.style.wordSpacing = `${wordSpacingInput.value}px`;
         textItalic.style.wordSpacing = `${wordSpacingInput.value}px`;
         wordSpacingValue.textContent = wordSpacingInput.value;
-    });
-
-    fontWeightInput.addEventListener("input", () => {
-        textBold.style.fontWeight = fontWeightInput.value;
-        textNormal.style.fontWeight = fontWeightInput.value;
-        textItalic.style.fontWeight = fontWeightInput.value;
-        fontWeightValue.textContent = fontWeightInput.value;
     });
 
     fontColorInput.addEventListener("input", () => {
@@ -117,6 +108,12 @@ document.addEventListener("DOMContentLoaded", () => {
     textNormal.style.fontFamily = "Futura";
     textItalic.style.fontFamily = "Futura";
     document.getElementById("textPreview").style.backgroundSize = `100% ${lineHeightInput.value * 20}px`;
+
+    // Set initial text from text input
+    const initialText = textInput.value;
+    textBold.textContent = initialText;
+    textNormal.textContent = initialText;
+    textItalic.textContent = initialText;
 
     // Set initial slider and label colors
     document.querySelectorAll('input[type="range"]').forEach(slider => {
