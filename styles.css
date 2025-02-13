@@ -55,6 +55,8 @@ input, select {
     white-space: pre-wrap; /* Ensure text wraps */
     overflow-wrap: break-word; /* Break words if necessary */
     box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    resize: none; /* Disable resizing */
+    height: 100px; /* Set a fixed height */
 }
 
 .text-input::placeholder {
