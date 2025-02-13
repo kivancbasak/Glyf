@@ -46,6 +46,20 @@ input, select {
     padding: 2px;
 }
 
+.text-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.font-selector {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
 input[type="range"] {
     -webkit-appearance: none;
     width: 100%;
