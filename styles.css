@@ -13,6 +13,7 @@ body {
     width: 80%;
     height: 200vh; /* Double the height */
     background: transparent; /* Transparent background */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
 }
@@ -56,9 +57,10 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 15px;
+    width: 3px;
     height: 15px;
     background: #FF00FF; /* Initial bright magenta color */
+    transition: opacity .15s ease-in-out;
     cursor: pointer;
 }
 
