@@ -47,11 +47,13 @@ input, select {
 }
 
 .text-input {
-    padding: 60px;
+    padding: 10px;
     border: 1px solid var(--slider-thumb-color, #FF00FF); /* Use the variable for border color */
     border-radius: 4px;
     margin-bottom: 10px;
     color: var(--slider-thumb-color, #FF00FF); /* Text color */
+    white-space: pre-wrap; /* Ensure text wraps */
+    overflow-wrap: break-word; /* Break words if necessary */
 }
 
 .text-input::placeholder {
