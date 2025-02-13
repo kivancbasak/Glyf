@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Update slider and label colors
         document.querySelectorAll('input[type="range"]').forEach(slider => {
             slider.style.background = color;
+            slider.style.setProperty('--slider-thumb-color', color);
         });
         document.querySelectorAll('label').forEach(label => {
             label.style.color = color;
@@ -102,6 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Set initial slider and label colors
     document.querySelectorAll('input[type="range"]').forEach(slider => {
         slider.style.background = "#FF00FF";
+        slider.style.setProperty('--slider-thumb-color', "#FF00FF");
     });
     document.querySelectorAll('label').forEach(label => {
         label.style.color = "#FF00FF";
