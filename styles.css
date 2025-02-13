@@ -23,6 +23,8 @@ body {
     font-size: 32px;
     letter-spacing: 1px;
     transition: all 0.3s ease;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 100% 20px; /* Initial grid size */
 }
 
 .text-line {

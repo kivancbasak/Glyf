@@ -2,9 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const textBold = document.getElementById("textBold");
     const textNormal = document.getElementById("textNormal");
     const textItalic = document.getElementById("textItalic");
+    const textInput = document.getElementById("textInput");
     const fontSizeInput = document.getElementById("fontSize");
     const letterSpacingInput = document.getElementById("letterSpacing");
     const lineHeightInput = document.getElementById("lineHeight");
+    const wordSpacingInput = document.getElementById("wordSpacing");
     const fontWeightInput = document.getElementById("fontWeight");
     const fontColorInput = document.getElementById("fontColor");
     const fontSelector = document.getElementById("fontSelector");
@@ -12,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const fontSizeValue = document.getElementById("fontSizeValue");
     const letterSpacingValue = document.getElementById("letterSpacingValue");
     const lineHeightValue = document.getElementById("lineHeightValue");
+    const wordSpacingValue = document.getElementById("wordSpacingValue");
     const fontWeightValue = document.getElementById("fontWeightValue");
     const fontColorValue = document.getElementById("fontColorValue");
 
@@ -50,6 +53,14 @@ document.addEventListener("DOMContentLoaded", () => {
         textNormal.style.lineHeight = lineHeightInput.value;
         textItalic.style.lineHeight = lineHeightInput.value;
         lineHeightValue.textContent = lineHeightInput.value;
+        document.getElementById("textPreview").style.backgroundSize = `100% ${lineHeightInput.value * 20}px`;
+    });
+
+    wordSpacingInput.addEventListener("input", () => {
+        textBold.style.wordSpacing = `${wordSpacingInput.value}px`;
+        textNormal.style.wordSpacing = `${wordSpacingInput.value}px`;
+        textItalic.style.wordSpacing = `${wordSpacingInput.value}px`;
+        wordSpacingValue.textContent = wordSpacingInput.value;
     });
 
     fontWeightInput.addEventListener("input", () => {
@@ -89,6 +100,12 @@ document.addEventListener("DOMContentLoaded", () => {
         document.head.appendChild(link);
     });
 
+    textInput.addEventListener("input", () => {
+        textBold.textContent = textInput.value;
+        textNormal.textContent = textInput.value;
+        textItalic.textContent = textInput.value;
+    });
+
     // Set initial styles
     textBold.style.fontWeight = "bold";
     textNormal.style.fontWeight = "normal";
@@ -99,6 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
     textBold.style.fontFamily = "Futura";
     textNormal.style.fontFamily = "Futura";
     textItalic.style.fontFamily = "Futura";
+    document.getElementById("textPreview").style.backgroundSize = `100% ${lineHeightInput.value * 20}px`;
 
     // Set initial slider and label colors
     document.querySelectorAll('input[type="range"]').forEach(slider => {
