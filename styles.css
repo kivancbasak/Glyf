@@ -51,6 +51,11 @@ input, select {
     border: 1px solid var(--slider-thumb-color, #FF00FF); /* Use the variable for border color */
     border-radius: 4px;
     margin-bottom: 10px;
+    color: var(--slider-thumb-color, #FF00FF); /* Text color */
+}
+
+.text-input::placeholder {
+    color: var(--slider-thumb-color, #FF00FF); /* Placeholder text color */
 }
 
 .font-selector {
@@ -58,6 +63,7 @@ input, select {
     border: 1px solid var(--slider-thumb-color, #FF00FF); /* Use the variable for border color */
     border-radius: 4px;
     margin-bottom: 10px;
+    color: var(--slider-thumb-color, #FF00FF); /* Text color */
 }
 
 input[type="range"] {

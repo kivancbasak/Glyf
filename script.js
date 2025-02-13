@@ -78,6 +78,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         document.querySelectorAll('.text-input, .font-selector').forEach(input => {
             input.style.borderColor = color;
+            input.style.color = color;
+        });
+        document.querySelectorAll('.text-input::placeholder').forEach(placeholder => {
+            placeholder.style.color = color;
+        });
+        document.querySelectorAll('span').forEach(span => {
+            span.style.color = color;
         });
     });
 
@@ -128,5 +135,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     document.querySelectorAll('.text-input, .font-selector').forEach(input => {
         input.style.borderColor = "#FF00FF";
+        input.style.color = "#FF00FF";
+    });
+    document.querySelectorAll('.text-input::placeholder').forEach(placeholder => {
+        placeholder.style.color = "#FF00FF";
+    });
+    document.querySelectorAll('span').forEach(span => {
+        span.style.color = "#FF00FF";
     });
 });
